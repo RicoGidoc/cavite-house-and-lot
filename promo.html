@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🏡 Promo with Big Savings 💰</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        /* Back Button */
+        .home-float {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: green;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        /* GRID */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 80px 20px 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* IMAGE */
+        .card img {
+            width: 45%;
+            height: 150px;
+            <!-- object-fit: cover; -->
+        }
+
+        /* CONTENT */
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <a href="index.html" class="home-float">🏠 Back</a>
+
+    <div class="grid-container">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <img src="zelia/houseimage.png">
+            <div class="card-content">
+                <h3>🏡 ZELIA UNIT</h3>
+                <p>📍 Tanza, Cavite</p>
+                <p>💰 Promo Available</p>
+                <a href="promozeliadetails.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <img src="charlize/modelhouse2.png">
+            <div class="card-content">
+                <h3>🏡 CHARLIZE MODEL HOUSE</h3>
+                <p>📍 Langkaan Dasma, Cavite</p>
+                <p>💰 Big Savings Promo</p>
+                <a href="promocharlizehouse.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <img src="westgov1&2/harris 1.png">
+            <div class="card-content">
+                <h3>🏡 HARRIET 2 STOREY TOWNHOUSE</h3>
+                <p>📍 TRECE, Cavite</p>
+                <p>💰 Low DP Promo</p>
+                <a href="promowestgov.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <img src="paseoverde/1.png">
+            <div class="card-content">
+                <h3>🏡PASEO VERDE CONDO</h3>
+                <p>📍 C5 LAS PINAS CITY</p>
+                <p>💰Discount Available</p>
+                <a href="promopaseov.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+            <img src="carmel/carmel1">
+            <div class="card-content">
+                <h3>🏡 CARMEL</h3>
+                <p>📍 ALONG AGUINALDO HIGHWAY, CAVITE CITY</p>
+                <p>💰 Limited Offer</p>
+                <a href="carmel.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

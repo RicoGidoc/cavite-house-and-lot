@@ -1,0 +1,176 @@
+body{
+    background-color: #10b981;
+    h1: 20px;
+    font-weight: 100;
+    color: #fff;
+}
+
+
+.bellefort{
+    margin-top: 10%;
+    margin-left: 10%;
+      
+}
+
+.details-container img {
+    position: static;
+    background: rgba(0, 0, 0, 0.7);
+    width: 25%;
+    height: 9%;
+    padding: 5px;
+    text-align: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    margin: 25% auto;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+  .details-container .liora-span{
+    display:inline;
+}
+
+.liora-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.main-img{
+margin-left: 35%;
+}
+
+.img-box {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* 🔥 Hover zoom effect */
+.img-box:hover img {
+    transform: scale(1.1);
+}
+
+/* CONTACT ME */
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #28a745;
+    /* green */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* CONTACT ME END */
+
+/* home page button css */
+
+.home-float {
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    background: #28a745;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.home-float:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+/* homepage button css end */
+
+
+/* Charater slides show start  */
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scrollText 5s linear infinite;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Character slide show end */
+
+/* carmel css  */
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.main-img {
+    width: 50%;
+    max-width: 550px;
+    border-radius: 12px;
+}
+
+.main-text {
+    width: 50%;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .main-img,
+    .main-text {
+        width: 100%;
+    }
+}
+/* carmel css end */
