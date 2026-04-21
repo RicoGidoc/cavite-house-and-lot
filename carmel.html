@@ -4,15 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <title>CARMEL</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+    }
+
+    .details-container {
+        max-width: 900px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+    }
+
+    /* Back Button */
+    .home-float {
+        display: inline-block;
+        margin: 15px;
+        text-decoration: none;
+        background: green;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+
+    /* Main Layout */
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .main-img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 10px;
+    }
+
+    .main-text {
+        flex: 1;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Gallery FIXED */
+    .liora-gallery {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .liora-gallery img {
+        height: 100px;
+        /* ✅ bigger thumbnails */
+        width: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .liora-gallery img:hover {
+        transform: scale(1.2);
+        /* ✅ zoom effect */
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+</style>
 
 <body>
 
     <a href="promo.html" class="home-float">🏠 Back to home page</a>
 
     <div class="details-container">
-        <h1><strong></strong>🏡✨ Carmel at Bacoor, Cavite by Crown Asia 🏠</strong><br> 
+
+        <h1>🏡✨ Carmel at Bacoor, Cavite by Crown Asia 🏠</h1>
 
         <!-- IMAGE + TEXT -->
         <div class="main-content">
@@ -27,102 +110,48 @@
                 </p>
 
                 <p><strong>🔑 HOME FEATURES:</strong><br>
-                    🏡 Property Features:
-                    🏠 Townhouse / Single Attached Units
-                    🛏️ Multiple Bedrooms
-                    🛁 Complete Toilet & Bath
+                    🏠 Townhouse / Single Attached Units<br>
+                    🛏️ Multiple Bedrooms<br>
+                    🛁 Complete Toilet & Bath<br>
                     🚘 With Parking Space
                 </p>
+
                 <p><strong>📍 PRIME LOCATION</strong><br>
                     ✔ Near main roads & transport<br>
                     ✔ Accessible to schools, markets & commercial areas
                 </p>
+
                 <p><strong>🎉 LIMITED UNITS ONLY!</strong></p>
             </div>
         </div>
 
         <!-- GALLERY -->
         <div class="liora-gallery">
-            <div class="img-box"><img src="carmel/carmel2"></div>
-            <div class="img-box"><img src="carmel/1.jpg"></div>
-            <div class="img-box"><img src="carmel/2.jpg"></div>
-            <div class="img-box"><img src="carmel/3.jpg"></div>
-            <div class="img-box"><img src="carmel/4.jpg"></div>
-            <div class="img-box"><img src="carmel/5.jpg"></div>
-            <div class="img-box"><img src="carmel/6.jpg"></div>
-            <div class="img-box"><img src="carmel/7.jpg"></div>
-            <div class="img-box"><img src="carmel/8.jpg"></div>
-            <div class="img-box"><img src="carmel/9.jpg"></div>
-            <div class="img-box"><img src="carmel/10.jpg"></div>
-            <div class="img-box"><img src="carmel/14.jpg"></div>
+            <img src="carmel/carmel2.jpg">
+            <img src="carmel/1.jpg">
+            <img src="carmel/2.jpg">
+            <img src="carmel/3.jpg">
+            <img src="carmel/4.jpg">
+            <img src="carmel/5.jpg">
+            <img src="carmel/6.jpg">
+            <img src="carmel/7.jpg">
+            <img src="carmel/8.jpg">
+            <img src="carmel/9.jpg">
+            <img src="carmel/10.jpg">
+            <img src="carmel/14.jpg">
         </div>
 
         <!-- DETAILS -->
         <h3>📍 Location:</h3>
-        <p> 📍 Located along Aguinaldo Highway, Brgy. Panapaan, Bacoor, Cavite
-        🚗 Very accessible to Las Piñas, Manila & Alabang</p>
-        <p>📌 Nearby Landmarks:
-        ✔️ St. Dominic Medical Center
-        ✔️ St. Dominic College of Asia
-        ✔️ Puregold Bacoor</p>
-
-        <p><strong>🏡 HEMINGWAY HOUSE MODEL (Carmel Bacoor)</strong></p>
-        
-        <p><strong>📐 Basic Details</strong><br>
-            🏠 Type: Townhouse / House & Lot<br>
-            🏢 Floors: 2-Storey<br>
-            📏 Floor Area: approx. 60 sqm<br>
-            📏 Lot Area: approx. 60 sqm (varies per unit)
-        </p>
-        
-        <p><strong>🛏️ Property Features</strong><br>
-            🛌 2 Bedrooms<br>
-            🛁 2 Toilet & Bath<br>
-            🚗 1 Car Garage / Carport<br>
-            🛋️ Living Area<br>
-            🍽️ Dining Area<br>
-            🍳 Kitchen Area<br>
-            🌿 Small garden / outdoor space<br>
-            🌅 With small terrace (2nd floor)
-        </p>
-        
-        <p><strong>🏠 Interior Layout</strong></p>
-        
-        <p><strong>Ground Floor:</strong><br>
-            • Living Area<br>
-            • Dining & Kitchen<br>
-            • Toilet & Bath
-        </p>
-        
-        <p><strong>Second Floor:</strong><br>
-            • 2 Bedrooms<br>
-            • Common Toilet & Bath<br>
-            • Small Family Area / Lounge<br>
-            • Terrace
-        </p>
-        
-        <p><strong>✨ Key Highlights</strong><br>
-            🇺🇸 California-inspired design (modern American style)<br>
-            🧱 Space-efficient layout (no wasted space)<br>
-            👨‍👩‍👧 Ideal for small to medium families<br>
-            🌬️ Cozy but functional—good for end-use or rental
-        </p>
-        
-        <p><strong>🏘️ Community Features (Carmel)</strong><br>
-            🏊 Swimming Pool<br>
-            🏡 Clubhouse<br>
-            🌳 Landscaped Gardens<br>
-            🛝 Playground<br>
-            🔐 24/7 Security
-        </p>
+        <p>Located along Aguinaldo Highway, Brgy. Panapaan, Bacoor, Cavite 🚗</p>
 
         <h3>💰 Price:</h3>
         <p>Reservation: ₱ </p>
 
         <h3>📞 Contact:</h3>
-        <p>email: gidocrealty@gmail.com</p>
+        <p>Email: gidocrealty@gmail.com</p>
         <p>Smart/WhatsApp: 09391209602</p>
-        <p>fb page:RicoHomes.ph</p>
+        <p>FB Page: RicoHomes.ph</p>
 
     </div>
 
