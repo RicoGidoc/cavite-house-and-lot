@@ -167,34 +167,8 @@ nav a:hover {
 
 /* ===== MARQUEE ===== */
 
-.marquee {
-    width: 100%;
-    overflow: hidden;
-    background: #28a745;
-    color: #fff;
-    padding: 10px 0;
-}
 
-.marquee p {
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100%;
-    animation: scrollText 5s linear infinite;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-    font-weight: 200;
-}
-
-@keyframes scrollText {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
+/* Margue end */
 /* ===== FOOTER ===== */
 .footer-dark {
     background: #0f172a;
