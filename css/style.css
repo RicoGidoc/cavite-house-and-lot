@@ -164,9 +164,11 @@ margin-left: 35%;
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
+    .marquee-content {
+        font-size: 15px;
+        animation: scrollText 14s linear infinite; /* slightly faster */
     }
+}
 
     .main-img,
     .main-text {
