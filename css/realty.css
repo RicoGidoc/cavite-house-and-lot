@@ -177,11 +177,11 @@ nav a:hover {
     white-space: nowrap;
     animation: scrollText 30s linear infinite;
 }
-#promo{
+/* #promo{
 color: yellow;
 white-space: nowrap; 
     animation: scrollText 30s linear infinite;
-}
+} */
 
 .marquee p: hover {
     animation-play-state: paused;
