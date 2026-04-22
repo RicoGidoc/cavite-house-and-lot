@@ -202,6 +202,11 @@ nav a:hover {
 
 /* ===== 📱 MOBILE ===== */
 @media (max-width: 768px) {
+    .marquee-content {
+        font-size: 15px;
+        animation: scrollText 14s linear infinite; /* slightly faster */
+    }
+}
 
     header h1 {
         font-size: 1.5rem;
