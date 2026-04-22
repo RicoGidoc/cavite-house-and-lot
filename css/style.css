@@ -130,6 +130,9 @@ margin-left: 35%;
     font-size: 50px;
     font-weight: 200;
 }
+.marquee p:hover {
+    animation-play-state: paused;
+}
 
 @keyframes scrollText {
     0% {
