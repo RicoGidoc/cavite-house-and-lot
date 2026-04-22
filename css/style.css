@@ -113,7 +113,7 @@ margin-left: 35%;
 
 /* Charater slides show start  */
 
-.marquee {
+ .marquee {
     width: 100%;
     overflow: hidden;
     background: #28a745;
@@ -129,7 +129,7 @@ margin-left: 35%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     font-weight: 200;
-}
+} 
 
 @keyframes scrollText {
     0% {
@@ -140,6 +140,7 @@ margin-left: 35%;
         transform: translateX(-100%);
     }
 }
+
 /* Character slide show end */
 
 /* carmel css  */
@@ -168,7 +169,7 @@ margin-left: 35%;
         font-size: 15px;
         animation: scrollText 14s linear infinite; /* slightly faster */
     }
-} */
+} 
     .main-img,
     .main-text {
         width: 100%;
