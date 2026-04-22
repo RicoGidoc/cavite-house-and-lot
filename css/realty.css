@@ -178,6 +178,10 @@ nav a:hover {
     animation: scrollText 30s linear infinite;
 }
 
+.marquee p:hover {
+    animation-play-state: paused;
+}
+
 @keyframes scrollText {
     from {
         transform: translateX(100%);
