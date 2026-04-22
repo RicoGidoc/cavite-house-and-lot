@@ -166,37 +166,32 @@ nav a:hover {
 }
 
 /* ===== MARQUEE ===== */
-/* 🔥 MARQUEE FIX */
 .marquee {
-    width: 100%;
-    overflow: hidden;
     background: #28a745;
-    color: #fff;
-    padding: 10px 0;
-    white-space: nowrap;
-    position: relative;
+    color: white;
+    padding: 10px;
+    overflow: hidden;
 }
 
-.marquee-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scrollText 25s linear infinite; /* slower = complete scroll */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 22px; /* 50px is too big = causes cut */
-    font-weight: 400;
+.marquee p {
+    white-space: nowrap;
+    animation: scrollText 30s linear infinite;
+}
+
+.marquee p:hover {
+    animation-play-state: paused;
 }
 
 @keyframes scrollText {
-    0% {
-        transform: translateX(0);
+    from {
+        transform: translateX(100%);
     }
-    100% {
+
+    to {
         transform: translateX(-100%);
     }
 }
 
-
-/* Margue end */
 /* ===== FOOTER ===== */
 .footer-dark {
     background: #0f172a;
