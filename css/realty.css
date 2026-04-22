@@ -179,7 +179,7 @@ nav a:hover {
 }
 #promo{
 color: yellow;
-white-space: nowrap;
+/* white-space: nowrap; */
     animation: scrollText 30s linear infinite;
 }
 
