@@ -112,8 +112,8 @@ margin-left: 35%;
 
 
 /* Charater slides show start  */
-
-/* .marquee {
+/* margue start */
+.marquee {
     width: 100%;
     overflow: hidden;
     background: #28a745;
@@ -130,21 +130,7 @@ margin-left: 35%;
     font-size: 50px;
     font-weight: 200;
 }
-.marquee p:hover {
-    animation-play-state: paused;
-}
-
-@keyframes scrollText {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-} */
-/* Character slide show end */
-
+/* margue end*/
 /* carmel css  */
 .main-content {
     display: flex;
