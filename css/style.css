@@ -121,34 +121,33 @@ margin-left: 35%;
     padding: 10px 0;
 }
 
-.marquee p {
-    display: inline-block;
+/* 🔥 MARQUEE FIX */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 0;
     white-space: nowrap;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
     padding-left: 100%;
-    animation: scrollText 5s linear infinite;
+    animation: scrollText 25s linear infinite; /* slower = complete scroll */
     font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-    font-weight: 200;
-}
-/* margue end*/
-/* carmel css  */
-.main-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 20px;
+    font-size: 22px; /* 50px is too big = causes cut */
+    font-weight: 400;
 }
 
-.main-img {
-    width: 50%;
-    max-width: 550px;
-    border-radius: 12px;
-}
-
-.main-text {
-    width: 50%;
-    font-size: 16px;
-    line-height: 1.7;
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* MOBILE FIX */
