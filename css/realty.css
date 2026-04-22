@@ -175,7 +175,7 @@ nav a:hover {
 
 .marquee p {
     white-space: nowrap;
-    animation: scrollText 40s linear infinite;
+    animation: scrollText 30s linear infinite;
 }
 
 @keyframes scrollText {
