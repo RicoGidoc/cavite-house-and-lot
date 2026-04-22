@@ -173,15 +173,17 @@ nav a:hover {
     overflow: hidden;
 }
 
-.marquee {
+.marquee p {  
     white-space: nowrap;
     animation: scrollText 30s linear infinite;
 }
-/* #promo{
+ /* promo running font inndex html center location */
+ 
+#promo{
 color: yellow;
 white-space: nowrap; 
-    animation: scrollText 30s linear infinite;
-} */
+animation: scrollText 30s linear infinite; 
+}
 
 .marquee p: hover {
     animation-play-state: paused;
