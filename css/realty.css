@@ -173,9 +173,13 @@ nav a:hover {
     overflow: hidden;
 }
 
-.marquee p, #promo {
-    color: yellow;
+.marquee {
     white-space: nowrap;
+    animation: scrollText 30s linear infinite;
+}
+#promo{
+color: yellow;
+white-space: nowrap;
     animation: scrollText 30s linear infinite;
 }
 
