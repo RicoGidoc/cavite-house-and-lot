@@ -2,40 +2,97 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bellefort House Details</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <a href="index.html" class="home-btn">🏠Back to home page</a>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+        }
+
+        /* Back Button */
+        .home-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            background: green;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        /* Image */
+        .main-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            gap: 5px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+
+        .gallery img {
+            height: 70px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Text */
+        h1 {
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+    </style>
 </head>
-
-
 
 <body>
 
     <div class="container">
+
+        <!-- Back Button -->
+        <a href="index.html" class="home-btn">🏠 Back to home page</a>
+
         <h1>KATHLEEN 5 TOWNHOUSE INNER UNIT 🏡</h1>
         <h2>📢 HOT PROMO! 🔥🏡💰</h2>
         <h3>📢 LIMITED OFFER! 🎯 7% DISCOUNT ON TCP 💥 ONLY 3% DOWNPAYMENT REQUIRED 💰</h3>
-        
 
-        <img src="kat5/k1.png" class="main-img">
+        <!-- Main Image -->
+        <img src="kat5/k1.png" class="main-img" id="mainImage">
+
+        <!-- Gallery -->
         <div class="gallery">
-            <div class="img-box"><img src="kat5/k1.png"></div>
-            <div class="img-box"><img src="kat5/k2.png"></div>
-            <div class="img-box"><img src="kat5/k3.png"></div>
-            <div class="img-box"><img src="kat5/k4.png"></div>
-            <div class="img-box"><img src="kat5/k5.png"></div>
-            <div class="img-box"><img src="kat5/k6.png"></div>
-            <div class="img-box"><img src="kat5/k7.png"></div>
-            <div class="img-box"><img src="kat5/k8.png"></div>
-            <div class="img-box"><img src="kat5/k9.png"></div>
-            <div class="img-box"><img src="kat5/k10.png"></div>
-            <div class="img-box"><img src="kat5/k11.png"></div>
-            <div class="img-box"><img src="kat5/k12.png"></div>
-            <div class="img-box"><img src="kat5/k13.png"></div>
-            <div class="img-box"><img src="kat5/k14.png"></div>
-            <div class="img-box"><img src="kat5/k15.png"></div>
-            <div class="img-box"><img src="kat5/k17.png"></div>
-
+            <img src="kat5/k1.png" onclick="changeImage(this)">
+            <img src="kat5/k2.png" onclick="changeImage(this)">
+            <img src="kat5/k3.png" onclick="changeImage(this)">
+            <img src="kat5/k4.png" onclick="changeImage(this)">
+            <img src="kat5/k6.png" onclick="changeImage(this)">
+            <img src="kat5/k7.png" onclick="changeImage(this)">
+            <img src="kat5/k8.png" onclick="changeImage(this)">
+            <img src="kat5/k9.png" onclick="changeImage(this)">
+            <img src="kat5/k10.png" onclick="changeImage(this)">
+            <img src="kat5/k11.png" onclick="changeImage(this)">
+            <img src="kat5/k12.png" onclick="changeImage(this)">
+            <img src="kat5/k13.png" onclick="changeImage(this)">
+            <img src="kat5/k14.png" onclick="changeImage(this)">
+            <img src="kat5/k15.png" onclick="changeImage(this)">
+            <img src="kat5/k17.png" onclick="changeImage(this)">
         </div>
 
         <h3>📍 Location:</h3>
@@ -50,17 +107,23 @@
             <li>Garage</li>
             <li>Service Area</li>
             <li>Terrace</li>
-            <li>Gated, Pre-installe Cabinet, House Complete Finished</li>
+            <li>Gated, Pre-installed Cabinet, Fully Finished</li>
             <li>Living Area, Dining Area, Kitchen</li>
         </ul>
 
         <h3>💰 Price:</h3>
-        <!-- <p>₱3,500,000</p> -->
 
         <h3>📞📩 Get in Touch with Your Property Consultant</h3>
         <p>RicoHomes.ph | 09391209602</p>
 
     </div>
+
+    <!-- JS for Image Click -->
+    <script>
+        function changeImage(img) {
+            document.getElementById("mainImage").src = img.src;
+        }
+    </script>
 
 </body>
 
