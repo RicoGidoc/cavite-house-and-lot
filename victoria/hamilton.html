@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HAMILTON TOWNHOUSE IMUS, CAVITE CITY</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <a href="index.html" class="home-btn">🏠Back to home page</a>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+    }
+
+    /* BACK BUTTON */
+    .home-btn {
+        display: inline-block;
+        margin: 15px;
+        text-decoration: none;
+        background: green;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    /* CONTAINER */
+    .container {
+        max-width: 850px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    /* MAIN IMAGE */
+    .main-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    /* THUMBNAIL GALLERY */
+    .gallery {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        margin-top: 12px;
+        padding-bottom: 5px;
+        scroll-snap-type: x mandatory;
+    }
+
+    /* THUMBNAILS */
+    .gallery img {
+        flex: 0 0 auto;
+        width: 80px;
+        height: 65px;
+        object-fit: cover;
+        border-radius: 6px;
+        cursor: pointer;
+        opacity: 0.6;
+        border: 2px solid transparent;
+        transition: 0.3s;
+        scroll-snap-align: start;
+    }
+
+    .gallery img:hover {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+    .gallery img.active {
+        border: 2px solid #1e3a8a;
+        opacity: 1;
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        .gallery img {
+            width: 65px;
+            height: 55px;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+    }
+</style>
+
+
+
+<body>
+
+    <div class="container">
+        <h1>HAMILTON END UNIT 🏡</h1>
+        <!-- <h2>📢 HOT PROMO! 🔥🏡💰</h2>
+        <h3>📢 LIMITED OFFER! 🎯 7% DISCOUNT ON TCP 💥 ONLY 3% DOWNPAYMENT REQUIRED 💰</h3> -->
+
+        <img src="hamilton/1.jpg" class="main-img">
+        <div class="gallery">
+            <div class="img-box"><img src="/hamilton/1.jpg"></div>
+            <div class="img-box"><img src="/hamilton/3.jpg"></div>
+            <div class="img-box"><img src="/hamilton/4.jpg"></div>
+            <div class="img-box"><img src="/hamilton/5.jpg"></div>
+            <div class="img-box"><img src="/hamilton/6.jpg"></div>
+            <div class="img-box"><img src="/hamilton/7.jpg"></div>
+            <div class="img-box"><img src="/hamilton/8.jpg"></div>
+            <div class="img-box"><img src="/hamilton/9.jpg"></div>
+            <div class="img-box"><img src="/hamilton/10.jpg"></div>
+            <div class="img-box"><img src="/hamilton/11.jpg"></div>
+            <div class="img-box"><img src="/hamilton/12.jpg"></div>
+            <div class="img-box"><img src="/hamilton/13.jpg"></div>        
+        </div>
+
+        <h3>📍 Location:</h3>
+        <p>Brgy Malagasang II-E Imus, Cavite</p>
+
+        <h3>📐 Property Details:</h3>
+        <ul>
+            <li>AMANDA END UNIT</li>
+            <li>Lot Area: 100sqm</li>
+            <li>Floor Area: 67 sqm</li>
+            <li>3 Bedrooms</li>
+            <li>2 Toilet & Bath 1 Powder room</li>
+            <li>Garage</li>
+            <li>Service Area</li>
+            <li>Terrace</li>
+            <li>Living Area, Dining Area, Kitchen</li>
+        </ul>
+
+        <h3>💰 Price:</h3>
+        <!-- <p>₱3,500,000</p> -->
+
+        <h3>📞📩 Get in Touch with Your Property Consultant</h3>
+        <p>RicoHomes.ph | 09391209602</p>
+
+    </div>
+
+</body>
+
+</html>
