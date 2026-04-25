@@ -3,16 +3,73 @@
 
 <head>
     <title>LIORA HOUSING NAIC</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <a href="index.html" class="home-float">🏠 Back to home page</a>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <a href="index.html" class="home-btn">🏠 Back to home page</a>
 </head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+    }
+
+    /* Back Button */
+    .home-btn {
+        display: inline-block;
+        margin-bottom: 15px;
+        text-decoration: none;
+        background: green;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+
+    /* Image */
+    .main-img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Gallery */
+    .gallery {
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+
+    .gallery img {
+        height: 70px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Text */
+    h1 {
+        margin-top: 10px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+</style>
 
 <body>
 
-    <div class="details-container">
+    <div class="container">
         <h1>✅LIORA NAIC TOWNHOUSE🏡</h1>
+
+        <img src="liora/liorahouse1.png" class="main-img">
         
-            <div class="liora-gallery">
+            <div class="gallery">
                 <div class="img-box"><img src="liora/liorahouse1.png"></div>
                 <div class="img-box"><img src="liora/basketball.png"></div>
                 <div class="img-box"><img src="liora/basketball2.png"></div>
