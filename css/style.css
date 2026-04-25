@@ -185,12 +185,24 @@ button {
 }
 
 /* ===== CAROUSEL ===== */
-.carousel-container {
+/* .carousel-container {
     width: 3in;
     height: 3in;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
+} */
+
+.carousel-container {
+    width: 3in;
+    height: 3in;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-bottom: 5%;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 3%;
 }
 
 .carousel-track {
