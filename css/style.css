@@ -435,3 +435,9 @@ button {
     transform: scale(1.05);
 }
 /* ========DEVELOPER CSS======= */
+/* ======AUTOCLICK CAROUSEL=========== */
+.carousel-track a img {
+  display: block;
+  pointer-events: auto;
+}
+/* =======AUTOCLICK CAROUSEL======= */
