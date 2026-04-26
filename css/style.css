@@ -436,7 +436,11 @@ button {
 }
 /* ========DEVELOPER CSS======= */
 /* ======AUTOCLICK CAROUSEL=========== */
-.carousel-track a img {
+.carousel-track a {
+  display: inline-block;
+}
+
+.carousel-track img {
   display: block;
   pointer-events: auto;
 }
