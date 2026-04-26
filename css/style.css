@@ -119,7 +119,58 @@ nav a {
 /* ===============================
    🚀 CAROUSEL FINAL FIX
 ================================ */
+/* ===== CAROUSEL RESPONSIVE FIX ===== */
 .carousel-container {
+    width: 100%;
+    max-width: 900px;      /* 🔥 BIGGER for desktop */
+    height: 400px;         /* desktop height */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* track */
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* each slide */
+.carousel-track a {
+    flex: 0 0 100%;
+    display: block;
+}
+
+/* image */
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* dots */
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.dot.active {
+    background: #1e3a8a;
+}
+
+/* .carousel-container {
     width: 100%;
     max-width: 350px;
     aspect-ratio: 1/1;
@@ -146,7 +197,7 @@ nav a {
     object-fit: cover;
     display: block;
     pointer-events: auto;
-}
+} */
 
 /* DOTS */
 .toggle-switch {
