@@ -133,17 +133,7 @@ nav a:hover {
     font-size: medium;
 }
 
-/* ===== GALLERY ===== */
-#Gallery {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    background: #fff;
-    border-radius: 12px;
-}
+
 
 /* ===== CONTACT ===== */
 .details-container {
@@ -257,18 +247,6 @@ button {
 .main-img {
     width: 60%;
     border-radius: 10px;
-}
-
-.gallery {
-    display: flex;
-    gap: 5px;
-    overflow-x: auto;
-    margin-top: 10px;
-}
-
-.gallery img {
-    height: 70px;
-    border-radius: 5px;
 }
 
 /* ===== HOME SECTION (SCOPED DESIGN SAFE) ===== */
