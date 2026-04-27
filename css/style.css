@@ -60,7 +60,7 @@ nav a {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
-    animation: scrollText 30s linear infinite;
+    animation: scrollText 1s linear infinite;
 }
 
 @keyframes scrollText {
