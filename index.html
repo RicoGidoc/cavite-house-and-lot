@@ -4,446 +4,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rico Gojar Gidoc Realty Hub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="./css/realty.css"> -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet">   
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Rico Gidoc Realty Hub</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    nav {
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: #2563eb;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    /* ===== MARQUEE ===== */
+    .marquee {
+      background: #16a34a;
+      color: white;
+      overflow: hidden;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .marquee p {
+      white-space: nowrap;
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 18s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* =======================
+       🔥 CAROUSEL FIX
+    ======================= */
+
+    .carousel-wrapper {
+      width: 100%;
+      padding: 15px 10px;
+    }
+
+    .carousel-container {
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #000;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-track a {
+      min-width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* DOTS */
+    .toggle-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: #cbd5e1;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #1e3a8a;
+    }
+
+    /* =======================
+       PROPERTY CARDS
+    ======================= */
+
+    .property-container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .property-image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .property-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .property-details {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .property-details h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .inquire-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #16a34a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    /* =======================
+       DESKTOP 35% LAYOUT FIX
+    ======================= */
+
+    @media (min-width: 1024px) {
+      body {
+        width: 35%;
+        margin: auto;
+        background: #dbe4f0;
+      }
+
+      .carousel-container {
+        height: 380px;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      body {
+        width: 100%;
+      }
+
+      .carousel-container {
+        height: 240px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
-  <header>
-     <h1>👉WELCOME TO ✨𝗥𝗜𝗖𝗢 𝗚𝗜𝗗𝗢𝗖 𝗣𝗥𝗢𝗣𝗘𝗥𝗧𝗬 𝗛𝗨𝗕🏡✨</h1>
-    <p>Your Trusted Partner in Property Investment</p>
-    <p>☎️WhatsApp 09391209602 📩email:gidocrealty@gmail.com</p>
-  </header>
 
-  <div class="marquee">
-    <p>
-      ✅🏡 <strong>FIND YOUR DREAM HOME WITH EASE</strong> ✨ |
-      🔎 <strong>Simple, Reliable & User-Friendly Platform</strong> 💻 |
-      🏠 <strong>Affordable & Quality Homes</strong> 📍 <strong>Prime Locations</strong> |
-      📋 <strong>Clear Details & Updated Listings</strong> 🔄 |
-      🧭 <strong>Step-by-Step Guidance</strong> for Buyers |
-      💖 <strong>Home Ownership Made Easy, Accessible & Rewarding</strong> 🙏 |
-      <b class="promo-text">
-        🔥 PROMO TODAY! 🏡 HOUSE AND LOT 💥 UP TO 50% DISCOUNT | 🎯 7% DISCOUNT | 💰 LOW DOWN PAYMENT | 📊 FLEXIBLE PAYMENT
-        PLAN 🚀 LIMITED OFFER! 💖 <strong>PLEASE CLICK THE IMAGE BELOW 👇👇👇👇👇 TO VIEW THE PROPERTY WITH EXCLUSIVE PROMO TODAY! 🏡💰✨
-      </b>
-    </p>
+<header>
+  <h2>👉 WELCOME TO RICO PROPERTY HUB 🏡</h2>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Properties</a>
+  <a href="#">Promo</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="marquee">
+  <p>🔥 PROMO TODAY - EXTRA LOT AREA + LOW DOWNPAYMENT + FLEXIBLE TERMS 🔥</p>
+</div>
+
+<!-- ================= CAROUSEL ================= -->
+<div class="carousel-wrapper">
+  <div class="carousel-container">
+    <div class="carousel-track">
+
+      <a href="promo.html"><img src="./k5.png" class="slide"></a>
+      <a href="promo.html"><img src="./phirst.png" class="slide"></a>
+      <a href="promo.html"><img src="./victoria/vc1.png" class="slide"></a>
+      <a href="promo.html"><img src="./zelia/houseimage.png" class="slide"></a>
+      <a href="promo.html"><img src="./liora/liora.jpg" class="slide"></a>
+      <a href="promo.html"><img src="./kat5/k1.png" class="slide"></a>
+      <a href="promo.html"><img src="./verdiana/1.jpg" class="slide"></a>
+      <a href="promo.html"><img src="./paseoverde/1.png" class="slide"></a>
+
+    </div>
   </div>
 
-  <!-- <nav>
-    <a href="promo.html" class="inquire-btn" id="prmwbsaving">🌟🏡PROMO W/BIG SAVINGS💰</a>
-    <nav>
-    <a href="video.html" class="inquire-btn">📹 Property Videos</a>
-    <a href="contact.html" class="inquire-btn">📩 ☎️Contact Us</a>
-    </nav>
-  </nav> -->
-
-    <!-- ==============paragraph================= -->
-    <!-- <div class="carousel-container">
-    <a href="promo.html">
-      <div class="carousel-track">
-        <img src="./k5.png" class="slide">
-        <img src="./phirst.png" class="slide">
-        <img src="./victoria/vc1.png" class="slide">
-        <img src="./zelia/houseimage.png" class="slide">
-        <img src="./westgov1&2/harris 1.png" class="slide">
-        <img src="./liora/liora.jpg" class="slide">
-        <img src="./kat5/k1.png" class="slide">
-        <img src="./verdiana/1.jpg" class="slide">
-        <img src="./paseoverde/1.png" class="slide">
-      </div>   
-    </a>
-    </div>
-     -->
-
-  <div class="carousel-container">
-  <div class="carousel-track">
-
-    <a href="promo.html"><img src="./k5.png" class="slide"></a>
-    <a href="promo.html"><img src="./phirst.png" class="slide"></a>
-    <a href="promo.html"><img src="./victoria/vc1.png" class="slide"></a>
-    <a href="promo.html"><img src="./zelia/houseimage.png" class="slide"></a>
-    <a href="promo.html"><img src="./westgov1&2/harris 1.png" class="slide"></a>
-    <a href="promo.html"><img src="./liora/liora.jpg" class="slide"></a>
-    <a href="promo.html"><img src="./kat5/k1.png" class="slide"></a>
-    <a href="promo.html"><img src="./verdiana/1.jpg" class="slide"></a>
-    <a href="promo.html"><img src="./paseoverde/1.png" class="slide"></a>
-
+  <div class="toggle-switch">
+    <button class="dot active"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
   </div>
 </div>
-    <div class="toggle-switch">
-      <button onclick="goToSlide(0)" class="dot active"></button>
-      <button onclick="goToSlide(1)" class="dot"></button>
-      <button onclick="goToSlide(2)" class="dot"></button>
-      <button onclick="goToSlide(3)" class="dot active"></button>
-      <button onclick="goToSlide(4)" class="dot"></button>
-      <button onclick="goToSlide(5)" class="dot"></button>
-      <button onclick="goToSlide(6)" class="dot active"></button>
-      <button onclick="goToSlide(7)" class="dot"></button>
-      <button onclick="goToSlide(8)" class="dot"></button>
-    </div>
-    
-      <!-- TOGGLE SWITCH / DOTS BELOW -->
-      <!-- <div class="toggle-switch">
-        <button onclick="showSlide(0)" class="dot active"></button>
-        <button onclick="showSlide(1)" class="dot"></button>
-        <button onclick="showSlide(2)" class="dot"></button>
-      </div>
-    </div> -->
-<!-- ==============java=================== -->
-    <!-- ============== JAVASCRIPT ============== -->
-    
-          <script>
-              document.addEventListener("DOMContentLoaded", function () {
 
-                let index = 0;
-              const track = document.querySelector(".carousel-track");
-              const slides = document.querySelectorAll(".slide");
-              const dots = document.querySelectorAll(".dot");
+<script>
+  let index = 0;
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
 
-              function update() {
-                track.style.transform = `translateX(-${index * 100}%)`;
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
 
-        dots.forEach(d => d.classList.remove("active"));
-              dots[index].classList.add("active");
-    }
+  function goToSlide(i) {
+    index = i;
+    update();
+  }
 
-              window.goToSlide = function(i) {
-                index = i;
-              update();
-    }
+  setInterval(() => {
+    index++;
+    if (index >= slides.length) index = 0;
+    update();
+  }, 3000);
+</script>
 
-    setInterval(() => {
-                index++;
-        if (index >= slides.length) index = 0;
-              update();
-    }, 3000);
-
-});
-          </script>
-    
-    
-
-    <!-- ================Java==================== -->
-        
-          
-<!-- PROPERTY 1 -->
-      <div id="property-list" class="property-container">
-        <div class="property-image">
-          <img src="aguirre/1.png" alt="Property 1">
-        </div>
-        <div class="property-details">
-          <h2>🏡PRE-SELLING AGUIRRE TOWNHOUSE</h2>
-          <!-- <p class="price">₱4,180,000.00</p> -->
-          <ul>
-            <li>📐 Lot Area: 80sqm</li>
-            <li>🏠 Floor Area: 142.40sqm - 168.24sqm.</li>
-            <li>🛏️ 4 Bedrooms</li>
-            <li>🚿 3 Toilet & Bath</li>
-            <li>Living Dining Area</li>
-            <li>🚗 1 Garage</li>
-            <li>🧺 Service Area</li>
-            <li>💧 Provision water tank</li>
-            <li>🏡 🎁 Additional FREE LOT AREAS available in Units 1–7 🌿💚</li>
-          </ul>
-          <p class="description">📍Dona Pilar Aguirre Road, Pilar Village III-A, Las Pinas City.</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="aguirre.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>
-
-      <!-- PROPERTY 1A-->
-      <div id="property-list" class="property-container">
-
-        
-        <div class="property-image">
-          <img src="victoria/vc1.png" alt="Property 1">
-        </div>
-        <div class="property-details">
-          <h2>🏡 VICTORIA VILLE SINGLE-ATTACHED HOUSE AND LOT</h2>
-          <!-- <p class="price">₱4,180,000.00</p> -->
-          <ul>
-            <li>📐 Lot Area: 90sqm</li>
-            <li>🏠 Floor Area: 158.84sqm - 168.24sqm.</li>
-            <li>🛏️ 3 Bedrooms</li>
-            <li>🚿 3 Toilet & Bath</li>
-            <li>🚗 2 Garage</li>
-            <li>🏡 With Attic</li>
-          </ul>
-          <p class="description">📍Panapaan III, Bacoor Cavite , Near schools & Coastal expressway.</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="victoria.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>
-    
-      <!-- PROPERTY 2 -->
-      <div class="property-container">
-        <div class="property-image">
-          <img src="neuville/nu1.jpg" alt="Property 2">
-        </div>
-        <div class="property-details">
-          <h2>🏡NEUVILLE 2 STOREY TOWNHOUSE ASTRID MODEL HOUS</h2>
-          <!-- <p class="price">₱2,800,000</p> -->
-          <ul>
-            <li>📐 Lot Area: 52sqm</li>
-            <li>🏠 Floor Area: 60.40sqm</li>
-            <li>🏠 Total Improve Floor Area: 90.00sqm</li>
-            <li>🛏️ 3 Bedrooms</li>
-            <li>🚿 2 Toilet & Bath</li>
-            <li>🚗 Parking Space</li>
-            <li>Terrace</li>
-
-          </ul>
-          <p class="description">📍Sanja Mayor Road, Tanza Cavite near SM Tanza</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="neuville.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>
-    
-      <!-- PROPERTY 3 -->
-      <div class="property-container">
-        <div class="property-image">
-          <img src="liora/liorahouse1.png" alt="Property 3">
-        </div>
-        <div class="property-details">
-          <h2>🏡LIORA HOMES-NAIC AMORA ECO-LOVE TOWNHOUSE</h2>
-          <!-- <p class="price">₱4,200,000</p> -->
-          <ul>
-            <li>📐 Lot Area: 50sqm</li>
-            <li>🏠 Floor Area: 44sqm</li>
-            <li>🛏️ 2 Bedrooms</li>
-            <li>🚿 1 Toilet & Bath</li>
-          </ul>
-          <p class="description">2 STOREY TOWNHOUSE INNER UNIT BASIC TURN-OVER.</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="liora.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>
-    
-      <!-- PROPERTY 4 -->
-      <div class="property-container">
-        <div class="property-image">
-          <img src="kat5/k1.png" alt="Property 4">
-        </div>
-        <div class="property-details">
-          <h2>🏡 KATHLEEN5 TOWNHOUSE</h2>
-          <!-- <p class="price">₱1,900,000</p> -->
-          <ul>
-            <li>✅ INNER UNIT 🏠</li>
-            <li>🏡 2-Storey Townhouse</li>
-            <li>📐 Lot Area: 80 sqm</li>
-            <li>🏠 Floor Area: 60 sqm</li>
-            <li>🛏️ 3 Bedrooms with Modular Cabinets</li>
-            <li>🚿 2 Toilet & Bath</li>
-            <li>🚗 1 Car Parking (2 Car Parking for End Unit)</li>
-            <li>🚪 Steel Door (Main Entrance)</li>
-            <li>🔒 Steel Gate Included</li>
-          </ul>
-          <p class="description">🏡✨ Perfect Starter Home for Young Families — Comfortable, Secure 🔒, and Move-In Ready! 🏠💖</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="k5.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>
-    
-      <!-- PROPERTY 5 -->
-      <div class="property-container">
-        <div class="property-image">
-          <img src="bellefort/sabine1.png" alt="Property 5">
-        </div>
-        <div class="property-details">
-          <h2>🏡 BELLEFORT SABINE MODEL HOUSE</h2>
-          <!-- <p class="price">₱5,500,000</p> -->
-          <ul>
-            <li>📐 Lot Area: 180 sqm</li>
-            <li>🏠 Floor Area: 120 sqm</li>
-            <li>🛏️ 4 Bedrooms</li>
-            <li>🚿 3 Toilet & Bath</li>
-            <li>🚗 2 Car Garage</li>
-          </ul>
-          <p class="description">Luxury living in a prime subdivision.</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="bellefort.html" class="inquire-btn">📩 View Gallery</a>
-
-        </div>
-      </div>
-    
-      <!-- PROPERTY 6 -->
-      <div class="property-container">
-        <div class="property-image">
-          <img src="hamilton/1.jpg" alt="Property 6">
-        </div>
-        <div class="property-details">
-          <h2>🏡 Amanda Corner Lot TownHouse</h2>
-          <ul>
-            <li>📐 Lot Area: 100sqm</li>
-            <li>🏠 Floor Area: 67sqm</li>
-            <li>🏠 Total Improve Floor Area: 140.75sqm</li>
-            <li>🛏️ 3 Bedrooms</li>
-            <li>🚿 2 Toilet & Bath 1 Powder Room</li>
-            <li>Garage, Living, Kitchen, Dining, Sevice Area</li>
-          </ul>
-          <p class="description">Corner lot with more space and privacy.</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="hamilton.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>
-    
-      <!-- PROPERTY 7 -->
-
-      <div class="property-container">
-        <div class="property-image">
-          <img src="verirene/1.jpg" alt="Property 6">
-        </div>
-        <div class="property-details" id="versaille">
-          <h2>🏡 VERSAILLES HIGH END SUBD. MODEL HOUSE: IRENE🏠</h2>
-          <ul>
-            <li>📐 Lot Area: 100sqm</li>
-            <li>🏠 Floor Area: 67sqm</li>
-            <li>🏠 Total Improve Floor Area: 140.75sqm</li>
-            <li>🛏️ 3 Bedrooms</li>
-            <li>🚿 2 Toilet & Bath 1 Powder Room</li>
-            <li>Garage, Living, Kitchen, Dining, Sevice Area</li>
-          </ul>
-          <p class="description">Corner lot with more space and privacy.</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="versailles.html" class="inquire-btn">🏡 Discover Other Models</a>
-        </div>
-      </div>
-
-      <!-- PROPERTY 8 -->
-      <div class="property-container">
-        <div class="property-image">
-          <img src="company pictures/pks.jpg" alt="Property 7">
-        </div>
-        <div class="property-details">
-          <h2>COMPANY ACTIVITIES</h2>
-          <!-- <p class="price">₱3,200,0</p> -->
-          <ul>
-            <li>👥 Team Manning & Recruitment</li>
-            <li>🏡 Saturation (Area Marketing)</li>
-            <li>🚗 Site Visit / Tripping with Clients</li>
-            <li>🎓 Sales Training & Office Coaching</li>
-          </ul>
-          <p class="description">We accomodate Inquiries</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="company.html" class="inquire-btn">📩 View Gallery</a>
-        </div>
-      </div>  
-
-      <!-- PROPERTY VIDEO -->
-
-      <div class="property-container">
-        <div class="property-image">
-          <img src="videoimage.png" alt="Property 7">
-        </div>
-        <div class="property-details">
-          <h2>HOUSING PROJECT VIDEOS</h2>
-          <!-- <p class="price">₱3,200,0</p> -->
-          <ul>
-            <li> VICTORIA</li>
-            <li>🏡 NEUVILLE</li>
-            <li>🚗 LIORA</li>
-            <li>🎓 KATHLEEN 5</li>
-            <li>BELLEFORT</li>
-          </ul>
-          <p class="description">Watch Videos for more details</p>
-          <a href="contact.html" class="inquire-btn">📩 Inquire Now</a>
-          <a href="video.html" class="inquire-btn">🎥View Videos</a>
-        </div>
-      </div>
-
-      
-
-
-  <!-- <div class="section" id="contact">
-  <h2>Contact Us</h2>
-
-  <form action="https://formspree.io/f/mblypqvn"method="POST">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form> -->
-
-
-  <div class="hero">
-    <h1>Your Dream Home Awaits</h1>
-  </div>
-
-  <!-- Footer -->
-</div>  
 </body>
 </html>
-
-<footer id="footer" class="footer-dark">
-
-  <div class="container-fluid px-4">
-
-    <div class="row py-5">
-
-      <!-- BRAND / ABOUT -->
-      <div class="col-md-4 mb-4">
-        <h4>🏡 RicoHomes.ph</h4>
-        <p>
-          Your trusted partner in finding affordable and quality homes near Manila.
-          Making your dream home within reach.
-        </p>
-      </div>
-
-      <!-- QUICK LINKS -->
-      <div class="col-md-3 mb-4">
-        <h5>Quick Links</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link p-0">🏠 Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#property-list" class="nav-link p-0">🏘️ Properties</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link p-0">📊 Request Computation</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- CONTACT DETAILS -->
-      <div class="col-md-3 mb-4">
-        <h5>Contact Us</h5>
-        <p>📞 0939 1209 602</p>
-        <p>📧 gidocrealty@gmail.com</p>
-        <p>📍 Manila, Philippines</p>
-      </div>
-
-      <!-- SOCIAL MEDIA -->
-      <div class="col-md-2 col-12 mb-4 text-center text-md-start">
-        <h5>🌐 Connect</h5>
-
-        <a href="https://web.facebook.com/ricogidocsocial" target="_blank" class="social-btn">
-          👍 Facebook Page
-        </a>
-      </div>
-
-    </div>
-
-    <!-- COPYRIGHT -->
-    <div class="text-center border-top pt-3 pb-2">
-      <p>© 2026 RicoHomes.ph | All Rights Reserved 🏡</p>
-    </div>
-
-  </div>
-
-</footer>
