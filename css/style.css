@@ -292,9 +292,39 @@
         }
 
         /* =================================
+           💻 DESKTOP ONLY
+           35% SCREEN DISPLAY
+        ================================= */
+        @media (min-width: 1024px) {
+
+            body {
+                width: 35%;
+                margin: auto;
+                background: #dbe4f0;
+            }
+
+            .carousel-container {
+                height: 420px;
+            }
+
+            .slide {
+                object-fit: contain;
+            }
+
+            .property-container,
+            .details-container {
+                width: 100%;
+            }
+        }
+
+        /* =================================
            📱 MOBILE RESPONSIVE
         ================================= */
         @media (max-width: 768px) {
+
+            body {
+                width: 100%;
+            }
 
             header h1 {
                 font-size: 22px;
