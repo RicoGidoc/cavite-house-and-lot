@@ -88,31 +88,22 @@
         }
 
         /* =================================
-           ✅ DESKTOP CAROUSEL FIX
+           ✅ CAROUSEL
         ================================= */
 
         .carousel-wrapper {
             width: 100%;
-            padding: 30px 15px;
+            padding: 20px 12px;
         }
 
         .carousel-container {
             width: 100%;
-            max-width: 1200px;
-
-            height: 50vh;
-            min-height: 350px;
-            max-height: 550px;
-
-            margin: auto;
             overflow: hidden;
 
             border-radius: 18px;
-            background: #fff;
+            background: transparent;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: auto;
 
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
         }
@@ -121,27 +112,23 @@
         .carousel-track {
             display: flex;
             width: 100%;
-            height: 100%;
-            transition: transform 0.5s ease;
         }
 
-        /* ===== SLIDES ===== */
+        /* ===== EACH SLIDE ===== */
         .carousel-track a {
             flex: 0 0 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
+            display: block;
         }
 
-        /* ===== IMAGE FIX ===== */
+        /* ===== IMAGE FIT ===== */
         .slide {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
 
             display: block;
-            background: white;
+
+            object-fit: cover;
+            border-radius: 18px;
         }
 
         /* ===== DOTS ===== */
@@ -190,10 +177,9 @@
 
         .property-image img {
             width: 100%;
-            height: 100%;
-            max-height: 450px;
-            object-fit: cover;
+            height: auto;
             border-radius: 14px;
+            display: block;
         }
 
         .property-info {
@@ -293,7 +279,6 @@
 
         /* =================================
            💻 DESKTOP ONLY
-           35% SCREEN DISPLAY
         ================================= */
         @media (min-width: 1024px) {
 
@@ -303,12 +288,17 @@
                 background: #dbe4f0;
             }
 
+            .carousel-wrapper {
+                padding: 15px 10px;
+            }
+
             .carousel-container {
-                height: 420px;
+                width: 100%;
             }
 
             .slide {
-                object-fit: contain;
+                width: 100%;
+                height: auto;
             }
 
             .property-container,
@@ -333,20 +323,6 @@
             nav a {
                 font-size: 12px;
                 padding: 8px 14px;
-            }
-
-            .carousel-container {
-                height: auto;
-                min-height: auto;
-                max-height: none;
-
-                border-radius: 12px;
-            }
-
-            .slide {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
             }
 
             .property-container {
