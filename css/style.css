@@ -122,8 +122,8 @@ nav a {
 /* ===== CAROUSEL RESPONSIVE FIX ===== */
 .carousel-container {
     width: 100%;
-    max-width: 900px;      /* 🔥 BIGGER for desktop */
-    height: 400px;         /* desktop height */
+    max-width: 100%;      /* 🔥 BIGGER for desktop */
+    height: autopx;         /* desktop height */
     margin: 40px auto;
     overflow: hidden;
     border-radius: 12px;
