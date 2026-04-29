@@ -144,12 +144,12 @@ nav a {
 }
 
 /* image */
-.slide {
+/* .slide {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-}
+} */
 
 /* dots */
 .toggle-switch {
@@ -194,7 +194,7 @@ nav a {
 .slide {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     pointer-events: auto;
 } */
