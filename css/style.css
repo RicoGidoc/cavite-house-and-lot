@@ -522,5 +522,41 @@ button {
       transition: 0.3s;
   }
 
+       MOBILE DISPLAY
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Make header text one line */
+  header h1 {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 40px 0 10px;
+  }
+
+  header p {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  /* Smaller nav buttons */
+  #promobutton a {
+    display: block;
+    font-size: 12px;
+    padding: 6px;
+    margin: 3px 0;
+  }
+
+  /* Smaller toggle button */
+  .toggle-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+    top: 5px;
+    right: 5px;
+  }
+}
+
 
 }
