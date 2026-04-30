@@ -4,14 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-========toggle switch============
-<script>
- function toggleSections() {
-      document.querySelector("header").classList.toggle("hide-section");
-    document.querySelector("#promobutton").classList.toggle("hide-section");
-}
-</script>
-================================
 
 /* ===== BODY ===== */
 body {
