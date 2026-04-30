@@ -54,13 +54,6 @@ header,
 } 
           </style>
 
- < script> 
-       function toggleSections() {
-      document.querySelector("header").classList.toggle("hide-section");
-    document.querySelector("#promobutton").classList.toggle("hide-section");
-}
- </script>
-
   
 
 <body>
@@ -188,7 +181,14 @@ header,
     }, 3000);
 
 });
-          </script>
+
+// ======== toggle switch function=======
+
+       function toggleSections() {
+      document.querySelector("header").classList.toggle("hide-section");
+    document.querySelector("#promobutton").classList.toggle("hide-section");
+}
+  </script>
     
     
 
