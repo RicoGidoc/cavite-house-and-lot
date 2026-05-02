@@ -515,8 +515,8 @@ button {
       text-decoration: none;
       color: #fff;
       background: linear-gradient(45deg, #2563eb, #3b82f6);
-      padding: 5px 8px;
-      border-radius: 25px;
+      padding: 2px 4px;
+      border-radius: 2px;
       font-size: 12px;
       font-weight: bold;
       transition: 0.3s;
@@ -533,7 +533,7 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 40px 0 10px;
+    padding: 0 2px 0 4px;
   }
 
   header p {
@@ -552,7 +552,7 @@ button {
   /* Smaller toggle button */
   .toggle-btn {
     font-size: 10px;
-    padding: 4px 8px;
+    padding: 2px 4px;
     top: 5px;
     right: 5px;
   }
