@@ -30,7 +30,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     padding: 20px;
     background: #1e3a8a;
     position: sticky;
