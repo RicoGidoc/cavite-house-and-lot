@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ricogidoc.github.io/cavite-house-and-lot//sitemap.xml
