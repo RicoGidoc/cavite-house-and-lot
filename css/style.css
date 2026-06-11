@@ -21,12 +21,11 @@ header {
     color: #fff;
 }
 .site-logo {
-    width: 60px;
-    height: auto;
-    display: block;
-    margin: 0 auto 5px;
+    max-width: 250px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
 }
-
 header h1 {
     font-size: 30px;
 }
