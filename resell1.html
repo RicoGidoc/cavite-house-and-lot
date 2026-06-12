@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resale Houses and Lots for Sale in Cavite</title>
+
+<meta name="description"
+content="Browse available resale houses and lots for sale in Cavite. Affordable properties in Dasmariñas, Bacoor, Imus, Trece Martires, and nearby areas.">
+
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+.header{
+    background:#0066cc;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.header h1{
+    margin-bottom:10px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.property-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.property-card:hover{
+    transform:translateY(-5px);
+}
+
+.property-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.property-content{
+    padding:15px;
+}
+
+.property-content h2{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#c0392b;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.property-content p{
+    margin-bottom:8px;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    background:#28a745;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#218838;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#222;
+    color:white;
+    margin-top:40px;
+}
+
+/* WhatsApp Button */
+.chat-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    padding:14px 22px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    z-index:99999;
+}
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:28px;
+    }
+
+    .property-card img{
+        height:200px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="https://api.whatsapp.com/send?phone=639391209602&text=Hello%20I%20am%20interested%20in%20your%20resale%20property."
+target="_blank"
+class="chat-btn">
+💬 WhatsApp Us
+</a>
+
+<div class="header">
+
+<h1>Resale Houses and Lots for Sale in Cavite</h1>
+
+<p>
+Browse affordable resale properties in Cavite.
+Updated listings with clean titles and attractive locations.
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="property-grid">
+
+<!-- CARD 1 -->
+<div class="property-card">
+
+<img src="resell/1.jpg"
+alt="City Homes Dasma Resale House">
+
+<div class="property-content">
+
+<h2>City Homes Dasma</h2>
+
+<div class="price">₱1.5 Million</div>
+
+<p>📍 Dasmariñas City, Cavite</p>
+
+<p>🏠 2 Bedrooms</p>
+
+<p>📐 57-70 sqm Lot Area</p>
+
+<a href="resell.html"
+class="btn">
+View Details
+</a>
+
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="property-card">
+
+<img src="pdc/1.png"
+alt="Resale House Bacoor Cavite">
+
+<div class="property-content">
+
+<h2>Bacoor Resale House</h2>
+
+<div class="price">₱9.7 Million</div>
+
+<p>📍 Cita Italia Molino Blvd., Bacoor City, Cavite</p>
+
+<p>📐 143 sqm Lot Area</p>
+
+<a href="resell2.html"
+class="btn">
+View Details
+</a>
+
+</div>
+</div>
+
+<!-- CARD 3 -->
+
+    
+ <!-- <div class="property-card">
+
+<img src="images/property3.jpg"
+alt="Imus Resale House">
+
+<div class="property-content">
+
+<h2>Imus Resale House</h2>
+
+<div class="price">₱3.2 Million</div>
+
+<p>📍 Cita Italia Molino Blvd., Bacoor City, Cavite</p>
+
+<p>🏠 4 Bedrooms</p>
+
+<p>📐 143 sqm Lot Area</p>
+
+<a href="imus-resale.html"
+class="btn">
+View Details
+</a>
+
+</div>
+</div>
+     -->
+
+    
+
+<!-- CARD 4 -->
+<!-- <div class="property-card">
+
+<img src="images/property4.jpg"
+alt="Trece Martires Resale House">
+
+<div class="property-content">
+
+<h2>Trece Martires House</h2>
+
+<div class="price">₱2.4 Million</div>
+
+<p>📍 Trece Martires City</p>
+
+<p>🏠 2 Bedrooms</p>
+
+<p>📐 75 sqm Lot Area</p>
+
+<a href="trece-resale.html"
+class="btn">
+View Details
+</a>
+
+</div>
+</div> -->
+
+
+</div>
+
+<footer>
+
+Rico G. Gidoc<br>
+Property Consultant<br>
+Cavite House and Lot
+
+</footer>
+
+</body>
+</html>
 
