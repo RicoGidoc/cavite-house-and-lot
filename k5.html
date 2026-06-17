@@ -118,19 +118,26 @@ margin: 15px auto;
     }
 }
         /* Gallery */
-        .gallery {
-            display: flex;
-            gap: 5px;
-            overflow-x: auto;
-            margin-top: 10px;
-        }
+     .gallery {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-top: 10px;
+    padding-bottom: 8px;
+}
 
-        .gallery img {
-            height: 70px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+       .gallery img {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.gallery img:hover {
+    transform: scale(1.05);
+}
         /* Text */
         h1 {
             margin-top: 10px;
