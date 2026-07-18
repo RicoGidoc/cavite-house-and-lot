@@ -77,6 +77,26 @@ ul {
     padding-left: 18px;
 }
 
+
+.gallery img {
+    height: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+.gallery img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.gallery img.active {
+    opacity: 1;
+    border-color: #16a34a;
+}
+
 .chat-btn {
     position: fixed;
     bottom: 20px;
@@ -100,6 +120,7 @@ ul {
     background: #1ebe5d;
     transform: scale(1.05);
 }
+    
 </style>
 
 <!-- Property Schema -->
@@ -156,8 +177,9 @@ ul {
 <h1>Cerulean TownVillas – Single Attached for Sale in Dasma, Pala-Pala Cavite</h1>
 
 <img src="cerulean/1.png"
+     id="mainImage"
      class="main-img"
-     alt="Cerulean TownVillas Single Attached House and Lot for Sale in Pala-Pala Dasmarinas Cavite"
+     alt="Cerulean Residences House and Lot for Sale in Dasmariñas Cavite"
      width="800"
      height="450">
 
@@ -288,6 +310,31 @@ For inquiries about Cerulean TownVillas, contact <strong>Rico Gidoc</strong> at
 </p>
 
 </div>
+
+<script>
+document.querySelectorAll('.gallery img').forEach(function(thumbnail) {
+
+    thumbnail.addEventListener('click', function() {
+
+        const mainImage = document.getElementById('mainImage');
+
+        // Change main image
+        mainImage.src = this.src;
+
+        // Change ALT text for accessibility
+        mainImage.alt = this.alt;
+
+        // Remove active class from all thumbnails
+        document.querySelectorAll('.gallery img').forEach(function(img) {
+            img.classList.remove('active');
+        });
+
+        // Highlight selected thumbnail
+        this.classList.add('active');
+    });
+
+});
+</script>
 
 </body>
 </html>
